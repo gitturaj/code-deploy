@@ -1,0 +1,18 @@
+-------------------------------------------------
+Boot Strap for Apache Installation on Amazon Linux
+--------------------------------------------------
+http://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install.html#codedeploy-agent-operations-install-linux
+http://docs.aws.amazon.com/AWSGettingStartedContinuousDeliveryPipeline/latest/GettingStarted/CICD_Jenkins_Pipeline.html
+http://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure.html
+
+1.  Using userdata Commands !!
+---Userdata commands----
+#!/bin/bash
+sudo su
+cd
+yum -y update
+yum install ruby -y
+cd /home/ec2-user
+curl -O https://aws-codedeploy-us-east-2.s3.amazonaws.com/latest/install
+chmod +x ./install
+./install auto
